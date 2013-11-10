@@ -24,15 +24,15 @@
     .parameter
 
     .prologue
-    .line 3630
+    .line 3719
     iput-object p1, p0, Lcom/mediatek/audioprofile/AudioProfileService$OverrideSystemThread;->this$0:Lcom/mediatek/audioprofile/AudioProfileService;
 
-    .line 3631
+    .line 3720
     const-string v0, "AudioProfileService"
 
     invoke-direct {p0, v0}, Ljava/lang/Thread;-><init>(Ljava/lang/String;)V
 
-    .line 3632
+    .line 3721
     return-void
 .end method
 
@@ -42,15 +42,15 @@
     .locals 4
 
     .prologue
-    .line 3637
+    .line 3726
     invoke-static {}, Landroid/os/Looper;->prepare()V
 
-    .line 3639
+    .line 3728
     iget-object v1, p0, Lcom/mediatek/audioprofile/AudioProfileService$OverrideSystemThread;->this$0:Lcom/mediatek/audioprofile/AudioProfileService;
 
     monitor-enter v1
 
-    .line 3640
+    .line 3729
     :try_start_0
     iget-object v0, p0, Lcom/mediatek/audioprofile/AudioProfileService$OverrideSystemThread;->this$0:Lcom/mediatek/audioprofile/AudioProfileService;
 
@@ -61,25 +61,25 @@
     invoke-direct {v2, v3}, Lcom/mediatek/audioprofile/AudioProfileService$AudioProfileHandler;-><init>(Lcom/mediatek/audioprofile/AudioProfileService;)V
 
     #setter for: Lcom/mediatek/audioprofile/AudioProfileService;->mAudioProfileHandler:Landroid/os/Handler;
-    invoke-static {v0, v2}, Lcom/mediatek/audioprofile/AudioProfileService;->access$1202(Lcom/mediatek/audioprofile/AudioProfileService;Landroid/os/Handler;)Landroid/os/Handler;
+    invoke-static {v0, v2}, Lcom/mediatek/audioprofile/AudioProfileService;->access$1302(Lcom/mediatek/audioprofile/AudioProfileService;Landroid/os/Handler;)Landroid/os/Handler;
 
-    .line 3643
+    .line 3732
     iget-object v0, p0, Lcom/mediatek/audioprofile/AudioProfileService$OverrideSystemThread;->this$0:Lcom/mediatek/audioprofile/AudioProfileService;
 
     invoke-virtual {v0}, Ljava/lang/Object;->notify()V
 
-    .line 3644
+    .line 3733
     monitor-exit v1
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 3647
+    .line 3736
     invoke-static {}, Landroid/os/Looper;->loop()V
 
-    .line 3648
+    .line 3737
     return-void
 
-    .line 3644
+    .line 3733
     :catchall_0
     move-exception v0
 

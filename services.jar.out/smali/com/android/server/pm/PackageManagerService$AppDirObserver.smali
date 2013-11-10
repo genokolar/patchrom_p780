@@ -354,7 +354,7 @@
 
     move-object/from16 v0, v23
 
-    iget-object v0, v0, Lcom/android/server/pm/PackageSettingBase;->name:Ljava/lang/String;
+    iget-object v0, v0, Lcom/android/server/pm/PackageSetting;->name:Ljava/lang/String;
 
     move-object/from16 v25, v0
 

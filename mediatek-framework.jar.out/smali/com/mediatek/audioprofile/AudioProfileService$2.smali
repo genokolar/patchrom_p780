@@ -24,7 +24,7 @@
     .parameter
 
     .prologue
-    .line 792
+    .line 854
     iput-object p1, p0, Lcom/mediatek/audioprofile/AudioProfileService$2;->this$0:Lcom/mediatek/audioprofile/AudioProfileService;
 
     invoke-direct {p0}, Lcom/mediatek/common/audioprofile/AudioProfileListener;-><init>()V
@@ -41,27 +41,27 @@
     .parameter "extra"
 
     .prologue
-    .line 795
+    .line 857
     if-ne p1, p2, :cond_1
 
-    .line 796
+    .line 858
     const-string v5, "AudioProfileService"
 
     const-string v6, "onRingerVolumeChanged with Volume don\'t change, do nothing!"
 
     invoke-static {v5, v6}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 847
+    .line 909
     :cond_0
     :goto_0
     return-void
 
-    .line 801
+    .line 863
     :cond_1
     iget-object v5, p0, Lcom/mediatek/audioprofile/AudioProfileService$2;->this$0:Lcom/mediatek/audioprofile/AudioProfileService;
 
     #getter for: Lcom/mediatek/audioprofile/AudioProfileService;->mExt:Lcom/mediatek/common/audioprofile/IAudioProfileExtension;
-    invoke-static {v5}, Lcom/mediatek/audioprofile/AudioProfileService;->access$1800(Lcom/mediatek/audioprofile/AudioProfileService;)Lcom/mediatek/common/audioprofile/IAudioProfileExtension;
+    invoke-static {v5}, Lcom/mediatek/audioprofile/AudioProfileService;->access$1900(Lcom/mediatek/audioprofile/AudioProfileService;)Lcom/mediatek/common/audioprofile/IAudioProfileExtension;
 
     move-result-object v5
 
@@ -71,11 +71,11 @@
 
     if-nez v5, :cond_0
 
-    .line 804
+    .line 866
     iget-object v5, p0, Lcom/mediatek/audioprofile/AudioProfileService$2;->this$0:Lcom/mediatek/audioprofile/AudioProfileService;
 
     #getter for: Lcom/mediatek/audioprofile/AudioProfileService;->mProfileStates:Ljava/util/HashMap;
-    invoke-static {v5}, Lcom/mediatek/audioprofile/AudioProfileService;->access$1500(Lcom/mediatek/audioprofile/AudioProfileService;)Ljava/util/HashMap;
+    invoke-static {v5}, Lcom/mediatek/audioprofile/AudioProfileService;->access$1600(Lcom/mediatek/audioprofile/AudioProfileService;)Ljava/util/HashMap;
 
     move-result-object v5
 
@@ -92,7 +92,7 @@
 
     check-cast v0, Lcom/mediatek/audioprofile/AudioProfileState;
 
-    .line 805
+    .line 867
     .local v0, activeProfileState:Lcom/mediatek/audioprofile/AudioProfileState;
     iget-object v5, p0, Lcom/mediatek/audioprofile/AudioProfileService$2;->this$0:Lcom/mediatek/audioprofile/AudioProfileService;
 
@@ -105,7 +105,7 @@
 
     move-result-object v1
 
-    .line 806
+    .line 868
     .local v1, activeScenario:Lcom/mediatek/audioprofile/AudioProfileManager$Scenario;
     sget-object v5, Lcom/mediatek/audioprofile/AudioProfileService$8;->$SwitchMap$com$mediatek$audioprofile$AudioProfileManager$Scenario:[I
 
@@ -117,36 +117,36 @@
 
     packed-switch v5, :pswitch_data_0
 
-    .line 839
+    .line 901
     if-lez p1, :cond_0
 
     if-nez p2, :cond_0
 
-    .line 840
+    .line 902
     iget-object v5, p0, Lcom/mediatek/audioprofile/AudioProfileService$2;->this$0:Lcom/mediatek/audioprofile/AudioProfileService;
 
     iget-object v6, p0, Lcom/mediatek/audioprofile/AudioProfileService$2;->this$0:Lcom/mediatek/audioprofile/AudioProfileService;
 
     #getter for: Lcom/mediatek/audioprofile/AudioProfileService;->mLastActiveProfileKey:Ljava/lang/String;
-    invoke-static {v6}, Lcom/mediatek/audioprofile/AudioProfileService;->access$1600(Lcom/mediatek/audioprofile/AudioProfileService;)Ljava/lang/String;
+    invoke-static {v6}, Lcom/mediatek/audioprofile/AudioProfileService;->access$1700(Lcom/mediatek/audioprofile/AudioProfileService;)Ljava/lang/String;
 
     move-result-object v6
 
     invoke-virtual {v5, p1, p2, v6}, Lcom/mediatek/audioprofile/AudioProfileService;->notifyRingerVolumeChanged(IILjava/lang/String;)V
 
-    .line 841
+    .line 903
     iget-object v5, p0, Lcom/mediatek/audioprofile/AudioProfileService$2;->this$0:Lcom/mediatek/audioprofile/AudioProfileService;
 
     iget-object v6, p0, Lcom/mediatek/audioprofile/AudioProfileService$2;->this$0:Lcom/mediatek/audioprofile/AudioProfileService;
 
     #getter for: Lcom/mediatek/audioprofile/AudioProfileService;->mLastActiveProfileKey:Ljava/lang/String;
-    invoke-static {v6}, Lcom/mediatek/audioprofile/AudioProfileService;->access$1600(Lcom/mediatek/audioprofile/AudioProfileService;)Ljava/lang/String;
+    invoke-static {v6}, Lcom/mediatek/audioprofile/AudioProfileService;->access$1700(Lcom/mediatek/audioprofile/AudioProfileService;)Ljava/lang/String;
 
     move-result-object v6
 
     invoke-virtual {v5, v6, p2}, Lcom/mediatek/audioprofile/AudioProfileService;->syncRingerVolumeToProfile(Ljava/lang/String;I)V
 
-    .line 842
+    .line 904
     const-string v5, "AudioProfileService"
 
     const-string v6, "onRingerVolumeChanged: sync volume 1->0 to last active profile when it cause ringemode change!"
@@ -155,15 +155,15 @@
 
     goto :goto_0
 
-    .line 808
+    .line 870
     :pswitch_0
     const/4 v4, 0x0
 
-    .line 809
+    .line 871
     .local v4, minVolume:I
     const/4 v3, 0x7
 
-    .line 810
+    .line 872
     .local v3, maxVolume:I
     if-lez p2, :cond_2
 
@@ -171,11 +171,24 @@
 
     if-eq p2, v5, :cond_2
 
-    .line 813
+    iget-object v5, p0, Lcom/mediatek/audioprofile/AudioProfileService$2;->this$0:Lcom/mediatek/audioprofile/AudioProfileService;
+
+    #getter for: Lcom/mediatek/audioprofile/AudioProfileService;->mExt:Lcom/mediatek/common/audioprofile/IAudioProfileExtension;
+    invoke-static {v5}, Lcom/mediatek/audioprofile/AudioProfileService;->access$1900(Lcom/mediatek/audioprofile/AudioProfileService;)Lcom/mediatek/common/audioprofile/IAudioProfileExtension;
+
+    move-result-object v5
+
+    invoke-interface {v5}, Lcom/mediatek/common/audioprofile/IAudioProfileExtension;->shouldSyncGeneralRingtoneToOutdoor()Z
+
+    move-result v5
+
+    if-eqz v5, :cond_2
+
+    .line 875
     iget-object v5, p0, Lcom/mediatek/audioprofile/AudioProfileService$2;->this$0:Lcom/mediatek/audioprofile/AudioProfileService;
 
     #getter for: Lcom/mediatek/audioprofile/AudioProfileService;->mPredefinedKeys:Ljava/util/List;
-    invoke-static {v5}, Lcom/mediatek/audioprofile/AudioProfileService;->access$1100(Lcom/mediatek/audioprofile/AudioProfileService;)Ljava/util/List;
+    invoke-static {v5}, Lcom/mediatek/audioprofile/AudioProfileService;->access$1200(Lcom/mediatek/audioprofile/AudioProfileService;)Ljava/util/List;
 
     move-result-object v5
 
@@ -191,27 +204,27 @@
 
     check-cast v2, Ljava/lang/String;
 
-    .line 814
+    .line 876
     .local v2, generalProfilekey:Ljava/lang/String;
     iget-object v5, p0, Lcom/mediatek/audioprofile/AudioProfileService$2;->this$0:Lcom/mediatek/audioprofile/AudioProfileService;
 
     invoke-virtual {v5, v2, p2}, Lcom/mediatek/audioprofile/AudioProfileService;->syncRingerVolumeToProfile(Ljava/lang/String;I)V
 
-    .line 815
+    .line 877
     iget-object v5, p0, Lcom/mediatek/audioprofile/AudioProfileService$2;->this$0:Lcom/mediatek/audioprofile/AudioProfileService;
 
     invoke-virtual {v5, v2}, Lcom/mediatek/audioprofile/AudioProfileService;->setActiveProfile(Ljava/lang/String;)V
 
-    .line 816
+    .line 878
     const-string v5, "AudioProfileService"
 
     const-string v6, "onRingerVolumeChanged in outdoor profile, so change to general profile!"
 
     invoke-static {v5, v6}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    goto :goto_0
+    goto/16 :goto_0
 
-    .line 822
+    .line 884
     .end local v2           #generalProfilekey:Ljava/lang/String;
     .end local v3           #maxVolume:I
     .end local v4           #minVolume:I
@@ -221,7 +234,7 @@
 
     if-eq v5, p2, :cond_0
 
-    .line 825
+    .line 887
     iget-object v5, p0, Lcom/mediatek/audioprofile/AudioProfileService$2;->this$0:Lcom/mediatek/audioprofile/AudioProfileService;
 
     iget-object v6, p0, Lcom/mediatek/audioprofile/AudioProfileService$2;->this$0:Lcom/mediatek/audioprofile/AudioProfileService;
@@ -233,7 +246,7 @@
 
     invoke-virtual {v5, p1, p2, v6}, Lcom/mediatek/audioprofile/AudioProfileService;->notifyRingerVolumeChanged(IILjava/lang/String;)V
 
-    .line 826
+    .line 888
     iget-object v5, p0, Lcom/mediatek/audioprofile/AudioProfileService$2;->this$0:Lcom/mediatek/audioprofile/AudioProfileService;
 
     iget-object v6, p0, Lcom/mediatek/audioprofile/AudioProfileService$2;->this$0:Lcom/mediatek/audioprofile/AudioProfileService;
@@ -245,7 +258,7 @@
 
     invoke-virtual {v5, v6, p2}, Lcom/mediatek/audioprofile/AudioProfileService;->syncRingerVolumeToProfile(Ljava/lang/String;I)V
 
-    .line 827
+    .line 889
     const-string v5, "AudioProfileService"
 
     const-string v6, "onRingerVolumeChanged: ringer volume changed, sysn to active profile except silent, meeting and outdoor!"
@@ -254,9 +267,7 @@
 
     goto/16 :goto_0
 
-    .line 806
-    nop
-
+    .line 868
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_1

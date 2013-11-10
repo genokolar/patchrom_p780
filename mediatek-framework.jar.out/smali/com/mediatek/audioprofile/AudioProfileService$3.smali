@@ -24,7 +24,7 @@
     .parameter
 
     .prologue
-    .line 854
+    .line 916
     iput-object p1, p0, Lcom/mediatek/audioprofile/AudioProfileService$3;->this$0:Lcom/mediatek/audioprofile/AudioProfileService;
 
     invoke-direct {p0}, Lcom/mediatek/common/audioprofile/AudioProfileListener;-><init>()V
@@ -40,7 +40,7 @@
     .parameter "vibrateSetting"
 
     .prologue
-    .line 857
+    .line 919
     const-string v0, "AudioProfileService"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -66,7 +66,7 @@
     iget-object v2, p0, Lcom/mediatek/audioprofile/AudioProfileService$3;->this$0:Lcom/mediatek/audioprofile/AudioProfileService;
 
     #getter for: Lcom/mediatek/audioprofile/AudioProfileService;->mLastVibrateType:I
-    invoke-static {v2}, Lcom/mediatek/audioprofile/AudioProfileService;->access$1900(Lcom/mediatek/audioprofile/AudioProfileService;)I
+    invoke-static {v2}, Lcom/mediatek/audioprofile/AudioProfileService;->access$2000(Lcom/mediatek/audioprofile/AudioProfileService;)I
 
     move-result v2
 
@@ -80,38 +80,38 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 859
+    .line 921
     iget-object v0, p0, Lcom/mediatek/audioprofile/AudioProfileService$3;->this$0:Lcom/mediatek/audioprofile/AudioProfileService;
 
     #getter for: Lcom/mediatek/audioprofile/AudioProfileService;->mLastVibrateType:I
-    invoke-static {v0}, Lcom/mediatek/audioprofile/AudioProfileService;->access$1900(Lcom/mediatek/audioprofile/AudioProfileService;)I
+    invoke-static {v0}, Lcom/mediatek/audioprofile/AudioProfileService;->access$2000(Lcom/mediatek/audioprofile/AudioProfileService;)I
 
     move-result v0
 
     if-ne p1, v0, :cond_0
 
-    .line 860
+    .line 922
     iget-object v0, p0, Lcom/mediatek/audioprofile/AudioProfileService$3;->this$0:Lcom/mediatek/audioprofile/AudioProfileService;
 
     const/4 v1, 0x1
 
     #setter for: Lcom/mediatek/audioprofile/AudioProfileService;->mDelaySetVibrate:Z
-    invoke-static {v0, v1}, Lcom/mediatek/audioprofile/AudioProfileService;->access$2002(Lcom/mediatek/audioprofile/AudioProfileService;Z)Z
+    invoke-static {v0, v1}, Lcom/mediatek/audioprofile/AudioProfileService;->access$2102(Lcom/mediatek/audioprofile/AudioProfileService;Z)Z
 
-    .line 861
+    .line 923
     const-string v0, "AudioProfileService"
 
     const-string v1, "onVibrateSettingChanged: current vibrate type is same as last one, delay set vibrate!"
 
     invoke-static {v0, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 863
+    .line 925
     :cond_0
     iget-object v0, p0, Lcom/mediatek/audioprofile/AudioProfileService$3;->this$0:Lcom/mediatek/audioprofile/AudioProfileService;
 
     #setter for: Lcom/mediatek/audioprofile/AudioProfileService;->mLastVibrateType:I
-    invoke-static {v0, p1}, Lcom/mediatek/audioprofile/AudioProfileService;->access$1902(Lcom/mediatek/audioprofile/AudioProfileService;I)I
+    invoke-static {v0, p1}, Lcom/mediatek/audioprofile/AudioProfileService;->access$2002(Lcom/mediatek/audioprofile/AudioProfileService;I)I
 
-    .line 864
+    .line 926
     return-void
 .end method

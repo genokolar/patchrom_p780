@@ -24,7 +24,7 @@
     .parameter
 
     .prologue
-    .line 1122
+    .line 1184
     iput-object p1, p0, Lcom/mediatek/audioprofile/AudioProfileService$7;->this$0:Lcom/mediatek/audioprofile/AudioProfileService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -44,12 +44,12 @@
 
     const/4 v5, 0x0
 
-    .line 1126
+    .line 1188
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 1127
+    .line 1189
     .local v0, action:Ljava/lang/String;
     const-string v2, "AudioProfileService"
 
@@ -73,7 +73,7 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1128
+    .line 1190
     const-string v2, "android.intent.action.BOOT_COMPLETED"
 
     invoke-virtual {v2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -82,20 +82,20 @@
 
     if-eqz v2, :cond_0
 
-    .line 1133
+    .line 1195
     const-string v2, "AudioProfileService"
 
     const-string v3, "Persist profile settings to system when boot complete!"
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1134
+    .line 1196
     iget-object v2, p0, Lcom/mediatek/audioprofile/AudioProfileService$7;->this$0:Lcom/mediatek/audioprofile/AudioProfileService;
 
     #calls: Lcom/mediatek/audioprofile/AudioProfileService;->persistValues(Z)V
-    invoke-static {v2, v5}, Lcom/mediatek/audioprofile/AudioProfileService;->access$2800(Lcom/mediatek/audioprofile/AudioProfileService;Z)V
+    invoke-static {v2, v5}, Lcom/mediatek/audioprofile/AudioProfileService;->access$2900(Lcom/mediatek/audioprofile/AudioProfileService;Z)V
 
-    .line 1137
+    .line 1199
     iget-object v2, p0, Lcom/mediatek/audioprofile/AudioProfileService$7;->this$0:Lcom/mediatek/audioprofile/AudioProfileService;
 
     #getter for: Lcom/mediatek/audioprofile/AudioProfileService;->mActiveProfileKey:Ljava/lang/String;
@@ -107,12 +107,12 @@
 
     move-result-object v1
 
-    .line 1138
+    .line 1200
     .local v1, activeScenario:Lcom/mediatek/audioprofile/AudioProfileManager$Scenario;
     iget-object v2, p0, Lcom/mediatek/audioprofile/AudioProfileService$7;->this$0:Lcom/mediatek/audioprofile/AudioProfileService;
 
     #getter for: Lcom/mediatek/audioprofile/AudioProfileService;->mRingerMode:I
-    invoke-static {v2}, Lcom/mediatek/audioprofile/AudioProfileService;->access$1700(Lcom/mediatek/audioprofile/AudioProfileService;)I
+    invoke-static {v2}, Lcom/mediatek/audioprofile/AudioProfileService;->access$1800(Lcom/mediatek/audioprofile/AudioProfileService;)I
 
     move-result v2
 
@@ -133,21 +133,21 @@
 
     if-nez v2, :cond_0
 
-    .line 1140
+    .line 1202
     iget-object v2, p0, Lcom/mediatek/audioprofile/AudioProfileService$7;->this$0:Lcom/mediatek/audioprofile/AudioProfileService;
 
     #getter for: Lcom/mediatek/audioprofile/AudioProfileService;->mAudioManager:Landroid/media/AudioManager;
-    invoke-static {v2}, Lcom/mediatek/audioprofile/AudioProfileService;->access$1000(Lcom/mediatek/audioprofile/AudioProfileService;)Landroid/media/AudioManager;
+    invoke-static {v2}, Lcom/mediatek/audioprofile/AudioProfileService;->access$1100(Lcom/mediatek/audioprofile/AudioProfileService;)Landroid/media/AudioManager;
 
     move-result-object v2
 
     invoke-virtual {v2, v6, v5, v5}, Landroid/media/AudioManager;->setAudioProfileStreamVolume(III)V
 
-    .line 1141
+    .line 1203
     iget-object v2, p0, Lcom/mediatek/audioprofile/AudioProfileService$7;->this$0:Lcom/mediatek/audioprofile/AudioProfileService;
 
     #getter for: Lcom/mediatek/audioprofile/AudioProfileService;->mAudioManager:Landroid/media/AudioManager;
-    invoke-static {v2}, Lcom/mediatek/audioprofile/AudioProfileService;->access$1000(Lcom/mediatek/audioprofile/AudioProfileService;)Landroid/media/AudioManager;
+    invoke-static {v2}, Lcom/mediatek/audioprofile/AudioProfileService;->access$1100(Lcom/mediatek/audioprofile/AudioProfileService;)Landroid/media/AudioManager;
 
     move-result-object v2
 
@@ -155,32 +155,32 @@
 
     invoke-virtual {v2, v3, v5, v5}, Landroid/media/AudioManager;->setAudioProfileStreamVolume(III)V
 
-    .line 1142
+    .line 1204
     const-string v2, "AudioProfileService"
 
     const-string v3, "Persist system volume to be 0 if ringermode is normal and volume is 0 when boot complete!"
 
     invoke-static {v2, v3}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1145
+    .line 1207
     .end local v1           #activeScenario:Lcom/mediatek/audioprofile/AudioProfileManager$Scenario;
     :cond_0
     iget-object v2, p0, Lcom/mediatek/audioprofile/AudioProfileService$7;->this$0:Lcom/mediatek/audioprofile/AudioProfileService;
 
     #getter for: Lcom/mediatek/audioprofile/AudioProfileService;->mBootCompleteReceiver:Landroid/content/BroadcastReceiver;
-    invoke-static {v2}, Lcom/mediatek/audioprofile/AudioProfileService;->access$2900(Lcom/mediatek/audioprofile/AudioProfileService;)Landroid/content/BroadcastReceiver;
+    invoke-static {v2}, Lcom/mediatek/audioprofile/AudioProfileService;->access$3000(Lcom/mediatek/audioprofile/AudioProfileService;)Landroid/content/BroadcastReceiver;
 
     move-result-object v2
 
     invoke-virtual {p1, v2}, Landroid/content/Context;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
 
-    .line 1146
+    .line 1208
     const-string v2, "AudioProfileService"
 
     const-string v3, "unregister mBootCompleteReceiver!"
 
     invoke-static {v2, v3}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 1147
+    .line 1209
     return-void
 .end method

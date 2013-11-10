@@ -39,7 +39,7 @@
 
     iput-object p3, p0, Lcom/android/server/pm/PackageManagerService$12;->val$mp:Lcom/android/server/pm/PackageManagerService$MoveParams;
 
-    invoke-direct/range {p0 .. p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
@@ -1129,11 +1129,11 @@
 
     move-object/from16 v1, v17
 
-    iput-object v0, v1, Lcom/android/server/pm/PackageSettingBase;->codePath:Ljava/io/File;
+    iput-object v0, v1, Lcom/android/server/pm/PackageSetting;->codePath:Ljava/io/File;
 
     move-object/from16 v0, v17
 
-    iget-object v0, v0, Lcom/android/server/pm/PackageSettingBase;->codePath:Ljava/io/File;
+    iget-object v0, v0, Lcom/android/server/pm/PackageSetting;->codePath:Ljava/io/File;
 
     move-object/from16 v23, v0
 
@@ -1145,7 +1145,7 @@
 
     move-object/from16 v1, v17
 
-    iput-object v0, v1, Lcom/android/server/pm/PackageSettingBase;->codePathString:Ljava/lang/String;
+    iput-object v0, v1, Lcom/android/server/pm/PackageSetting;->codePathString:Ljava/lang/String;
 
     new-instance v23, Ljava/io/File;
 
@@ -1169,11 +1169,11 @@
 
     move-object/from16 v1, v17
 
-    iput-object v0, v1, Lcom/android/server/pm/PackageSettingBase;->resourcePath:Ljava/io/File;
+    iput-object v0, v1, Lcom/android/server/pm/PackageSetting;->resourcePath:Ljava/io/File;
 
     move-object/from16 v0, v17
 
-    iget-object v0, v0, Lcom/android/server/pm/PackageSettingBase;->resourcePath:Ljava/io/File;
+    iget-object v0, v0, Lcom/android/server/pm/PackageSetting;->resourcePath:Ljava/io/File;
 
     move-object/from16 v23, v0
 
@@ -1185,11 +1185,11 @@
 
     move-object/from16 v1, v17
 
-    iput-object v0, v1, Lcom/android/server/pm/PackageSettingBase;->resourcePathString:Ljava/lang/String;
+    iput-object v0, v1, Lcom/android/server/pm/PackageSetting;->resourcePathString:Ljava/lang/String;
 
     move-object/from16 v0, v17
 
-    iput-object v10, v0, Lcom/android/server/pm/PackageSettingBase;->nativeLibraryPathString:Ljava/lang/String;
+    iput-object v10, v0, Lcom/android/server/pm/PackageSetting;->nativeLibraryPathString:Ljava/lang/String;
 
     move-object/from16 v0, p0
 
